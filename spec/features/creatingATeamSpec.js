@@ -1,3 +1,5 @@
+
+
 describe('A Captain', function() {
   var team;
 
@@ -24,6 +26,13 @@ describe('A Captain', function() {
      addFemalePlayers(team, 3);
 
      expect(team.isValid()).toBe(false);
+  });
+
+  it('knows when there is not a gender balance', function() {
+    addMalePlayers(team, 9);
+    addFemalePlayers(team,1);
+
+    expect(team.isValid()).toBe(false);
   });
 
   function addMalePlayers(team, quantity) {
