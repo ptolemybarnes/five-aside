@@ -1,17 +1,18 @@
-function Team(addPlayer) {
-  this.addPlayer = function() {
-  };
-  this.isValid = function () {
-    return true;
-  };
+function Team() {
+  this.players = [];
+};
 
+Team.prototype.isValid = function () {
+  if(this.players.length > 10) {
+    return false;
+  } 
+  return true;
+};
 
-}
+Team.prototype.addPlayer = function(player) {
+  this.players.push(player);
+};
 
-function MalePlayer() {
+function MalePlayer() {};
 
-}
-
-function FemalePlayer() {
-
-}
+function FemalePlayer() {};
