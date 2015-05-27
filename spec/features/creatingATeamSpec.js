@@ -1,8 +1,11 @@
 describe('A Captain', function() {
+  var team;
+
+  beforeEach(function() {
+    team = new Team();
+  });
 
   it('knows when a team is valid', function() {
-    var team = new Team();
-
     addMalePlayers(team, 7);
     addFemalePlayers(team, 3);
 
@@ -10,8 +13,6 @@ describe('A Captain', function() {
   });
 
   it('knows when a team is too large', function() {
-    var team = new Team();
-
     addMalePlayers(team, 10);
     addFemalePlayers(team, 3);
 
@@ -19,8 +20,6 @@ describe('A Captain', function() {
   });
 
   it("knows a team is too small", function() {
-     var team = new Team();
-
      addMalePlayers(team, 3);
      addFemalePlayers(team, 3);
 
