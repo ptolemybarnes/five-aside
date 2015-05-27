@@ -3,7 +3,7 @@ function Team() {
 };
 
 Team.prototype.isValid = function () {
-  if(this.players.length > 10) {
+  if(this.players.length > 10 || this.players.length < 7) {
     return false;
   } 
   return true;
